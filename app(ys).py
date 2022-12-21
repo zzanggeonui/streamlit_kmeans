@@ -19,6 +19,9 @@ def main():
         df = pd.read_csv(file)
         st.dataframe( df )
 
+        # 결측값(nan) 처리한다.
+        df.dropna(inplace=True)
+
         ##4.wcss를 확인하기 위한, 그룹의 갯수를 정할수있다.(1~10개)
         columns = df.columns
         selected_columns = st.multiselect('원하는 컬럼을 선택하세요' , columns )
