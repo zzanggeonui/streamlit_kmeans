@@ -8,11 +8,11 @@ from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import MinMaxScaler
 
 def main():
-    st.title('K-Means 클러스터링')
+    st.title('K-Means 클러스터링 앱 ')
 
 ## 1.유저가 클러스터링 하고싶은 csv파일을 업로드
 
-    file = st.file_uploader('클러스터링시켜드림', type=['csv'])
+    file = st.file_uploader('파일을 업로드 하세요', type=['csv'])
 
 ##2.업로드한 csv파일을 데이터프레임으로 읽고
     if file is not None :
