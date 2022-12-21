@@ -72,7 +72,13 @@ def main():
 
             st.subheader('wcss를 위한 클러스터링 갯수를 선택')
 
-            max_number = st.slider('최대 그룹 선택',2,10,value=5)
+            #행의 갯수 가저오기
+            if X_new.shape[0] < 10:
+                default_value = X_new.shape[0]
+            else :
+                default_value = 10
+
+            max_number = st.slider('최대 그룹 선택',2,20,value= default_value)
 
 
             wcss = []
