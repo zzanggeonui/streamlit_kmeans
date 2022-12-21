@@ -39,9 +39,12 @@ def main():
             for name in X.columns :
                 print(name)
                 
+
+                
                 #각컬럼 데이터를 가저온다
                 data = X[name]
-                
+                data.rest_index(inplace=True, drop=True)
+
                 # 문자열인지 아닌지 나눠서 처리하면 된다.
                 if data.dtype == object :
                 
